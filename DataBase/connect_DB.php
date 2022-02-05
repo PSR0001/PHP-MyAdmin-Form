@@ -1,29 +1,26 @@
-    <!-- connect to Database -->
-    <?php include 'connect_DB.php'?>
-    <!-- database alerts -->
-    <?php
-    $nameDB = "Psr2";
-    // Create a DB
-    $sql = "CREATE DATABASE $nameDB";
-    $result = mysqli_query($connect,$sql);
+<?php
+    // Connecting to Database
+    $serverName = "localhost";
+    $userName = "root";
+    $pass = "";
 
-    // For debugging
-    // echo var_dump($result);
+    // Create a connection 
+    $connect = mysqli_connect($serverName, $userName, $pass);
 
-    if($result){
+    // Die if connection was not successfull
+    if ($connect) {
         echo '<div class="container"><div class="alert alert-primary alert-dismissible fade show" role="alert">
-        <strong>Yaah !!</strong>'.$nameDB.' Database Created !!
+        <strong>Yaah !!</strong> Your  has been Submitted !!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div></div>';
-    }else{
+    } else {
         // echo the alert-->
         echo '<div class="container my-5"><div class="alert alert-primary alert-dismissible fade show" role="alert">
-        <strong>Oops !!</strong> Error : Database Already Exits!!
+        <strong>Oops !!</strong> Error : Have Some Issue!!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div></div>';
-        echo mysqli_error($connect);
+        echo mysqli_connect_error($connect);
     }
 
-    ?>
 
-
+?>
