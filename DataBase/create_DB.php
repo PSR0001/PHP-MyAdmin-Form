@@ -3,6 +3,11 @@
 
         // Data-Base name Coming From User
         $nameDB= $_POST['nameDB2'];
+        $table = $_POST['table'];
+
+        // for debugging
+        // $nameDB= "testcool69";
+
         // Create a DB
         $sql = "CREATE DATABASE $nameDB";
         $result = mysqli_query($connect, $sql);
@@ -21,7 +26,6 @@
         <strong>Oops !!</strong> Error : Database Already Exits!!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div></div>';
-            echo mysqli_error($connect);
         }
     
     ?>

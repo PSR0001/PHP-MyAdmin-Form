@@ -37,13 +37,15 @@
         </div>
     </nav>
     <!-- for alert -->
-    <!-- Php Code -->    
+    <!-- Php Code -->
     <!-- connect to Database -->
     <?php include 'DataBase/connect_DB.php'; ?>
-    
+
     <?php
-        if ($_SERVER['REQUEST_METHOD'] == "POST") 
-             include 'DataBase/create_DB.php';
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        include 'DataBase/create_DB.php';
+       include 'DataBase/create_table.php';
+    }
     ?>
     <!-- fot form -->
     <div class="container">
@@ -52,6 +54,10 @@
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Your Data-base Name</label>
                 <input type="text" name="nameDB2" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter Your Data-base Table Name</label>
+                <input type="text" name="table" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
