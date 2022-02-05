@@ -44,6 +44,7 @@
     <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         include 'DataBase/create_DB.php';
+        
        include 'DataBase/create_table.php';
     }
     ?>

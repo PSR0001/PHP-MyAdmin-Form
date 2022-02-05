@@ -1,6 +1,5 @@
-    <!-- database alerts -->
+ 
     <?php
-
         // Data-Base name Coming From User
         $nameDB= $_POST['nameDB2'];
         $table = $_POST['table'];
@@ -14,7 +13,8 @@
 
         // For debugging
         // echo var_dump($result);
-
+        
+        // database alerts 
         if ($result) {
             echo '<div class="container"><div class="alert alert-primary alert-dismissible fade show" role="alert">
         <strong>Yaah !!</strong>' . $nameDB . ' Database Created !!
