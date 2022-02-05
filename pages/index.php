@@ -38,7 +38,7 @@
     </nav>
     <!-- for alert -->
     <!-- Php Code -->
-    <?php include 'Data/fetch_data.php'    ?>
+    <?php include '../Data/fetch_data.php'    ?>
 
 
 

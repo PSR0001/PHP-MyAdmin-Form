@@ -10,7 +10,7 @@
     // Die if connection was not successfull
     if ($connect) {
         echo '<div class="container"><div class="alert alert-primary alert-dismissible fade show" role="alert">
-        <strong>Yaah !!</strong> Your  has been Submitted !!
+        <strong>Yaah !!</strong> Your MySQL has been Connected!!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div></div>';
     } else {

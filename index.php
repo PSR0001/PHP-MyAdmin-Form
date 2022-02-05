@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/psr/pages/index.php">Home</a>
+                        <a class="nav-link " aria-current="page" href="/psr/pages/index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/psr/index.php">Data-Base</a>
@@ -37,29 +37,25 @@
         </div>
     </nav>
     <!-- for alert -->
-    <!-- Php Code -->
-
-
-
+    <!-- Php Code -->    
+    <!-- connect to Database -->
+    <?php include 'DataBase/connect_DB.php'; ?>
+    
+    <?php
+        if ($_SERVER['REQUEST_METHOD'] == "POST") 
+             include 'DataBase/create_DB.php';
+    ?>
     <!-- fot form -->
     <div class="container">
         <h2>Please Enter Details Here :</h2>
         <form action="index.php" method="post">
-
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter Your Data-base Name</label>
-                <input type="text" name="name" class="form-control">
-                <div id="emailHelp" class="form-text">
+                <input type="text" name="nameDB2" class="form-control">
             </div>
-          
-        
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
-
-
-
 
     <!-- Bootstrap script cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
