@@ -11,5 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>';
 
         //   submit the info to the Database
+        
     }
 ?>
