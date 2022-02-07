@@ -44,10 +44,11 @@
     <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         include 'DataBase/create_DB.php';
-        
-       include 'DataBase/create_table.php';
+        include 'DataBase/create_table.php';
     }
     ?>
+
+
     <!-- fot form -->
     <div class="container">
         <h2>Please Enter Details Here :</h2>
