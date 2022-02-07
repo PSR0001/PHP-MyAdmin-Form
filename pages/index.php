@@ -38,11 +38,12 @@
     </nav>
     <!-- for alert -->
     <!-- Php Code -->
+    <!-- connect to Database -->
     <?php include '../Data/fetch_data.php'    ?>
+    <?php //include '../Data/submit_data.php' ?>
 
 
-
-    <!-- fot form -->
+    <!-- for form -->
     <div class="container">
         <h2>Please Enter Your Details Here :</h2>
         <form action="index.php" method="post">
